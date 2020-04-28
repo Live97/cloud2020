@@ -2,11 +2,10 @@ package com.atguigu.cloud.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
-@NoArgsConstructor
+//@NoArgsConstructor
 //通用的，先设置成T
 public class CommonResult<T> {
 	

@@ -11,6 +11,17 @@
 	
 	<artifactId>cloud-provider-payment8001</artifactId>
 	<dependencies>
+		<!--  引入自定义的jar，作用是将公共部分的东西提取出来，方便维护之余还能减少冗余，美化代码-->
+		<dependency>
+			<groupId>com.atguigu.cloud</groupId>
+			<artifactId>cloud-api-common</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
 		
 		<dependency>
 			<groupId>mysql</groupId>
@@ -18,15 +29,16 @@
 		</dependency>
 		<dependency>
 			<groupId>com.alibaba</groupId>
-			<artifactId>druid</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.alibaba</groupId>
 			<artifactId>druid-spring-boot-starter</artifactId>
 			<version>1.1.10</version>
 		</dependency>
-		
-		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<version>2.0.1.RELEASE</version>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>

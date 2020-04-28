@@ -12,6 +12,11 @@
   <!-- 子模块 -->
   <modules>
     <module>cloud-provider-payment8001</module>
+    <module>cloud-consumer-order-80</module>
+    <module>cloud-api-common</module>
+    <module>cloud-eureka-server-7001</module>
+    <module>cloud-eureka-server-7002</module>
+    <module>cloud-eureka-server-7003</module>
   </modules>
   <name>Maven</name>
   <!-- FIXME change it to the project's website -->
@@ -28,6 +33,7 @@
       <lombok.version>1.16.22</lombok.version>
       <mysql.version>8.0.16</mysql.version>
       <druid.version>1.1.16</druid.version>
+      <devtools.version>2.0.1.RELEASE</devtools.version>
       <spring.boot.version>2.2.2.RELEASE</spring.boot.version>
       <spring.cloud.version>Hoxton.SR1</spring.cloud.version>
       <spring.cloud.alibaba.version>2.1.0.RELEASE</spring.cloud.alibaba.version>
@@ -74,6 +80,13 @@
       <dependency>
         <groupId>org.projectlombok</groupId>
         <artifactId>lombok</artifactId>
+        <version>${lombok.version}</version>
+      </dependency>
+  
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-devtools</artifactId>
+        <version>${devtools.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
