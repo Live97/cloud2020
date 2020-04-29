@@ -1,5 +1,5 @@
 server:
-  port: 8001
+  port: 8002
 spring:
   application:
     name: cloud-payment-service
@@ -17,14 +17,15 @@ eureka:
     fetch-registry: true
     service-url:
       # 单机版
-       defaultZone: http://localhost:7001/eureka
-    #*******************************************************#
+      # defaultZone: http://localhost:7001/eureka
+      #*******************************************************#
       # 集群版写法
-#        defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
   instance:
-    instance-id: payment8001
+    # 修改在eureka注册中心显示的名称，默认是主机名:微服务名称:端口，我们不想这些信息暴露出去，就可以借用instance-id
+    instance-id: payment8002
+    # 显示ip地址
     prefer-ip-address: true
-
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.atguigu.cloud.entities # 所以entity别名类所在包
